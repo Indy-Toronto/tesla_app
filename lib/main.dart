@@ -5,6 +5,8 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tesla_app/battery.dart';
+import 'package:tesla_app/middlerow.dart';
 
 void main(List<String> args) {
   runApp(TeslaApp());
@@ -48,24 +50,7 @@ class LandingPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              children: [
-                Icon(
-                  FontAwesomeIcons.batteryEmpty,
-                  color: Colors.grey.shade700,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "10 km",
-                  style: TextStyle(
-                    color: Colors.grey.shade700,
-                    fontWeight: FontWeight.w600,
-                  ),
-                )
-              ],
-            ),
+            BatteryRow(),
             Container(
               width: double.infinity,
               child: Text(
@@ -77,7 +62,12 @@ class LandingPage extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
               ),
-            )
+            ),
+            Container(
+              width: double.infinity,
+              height: 230,
+            ),
+            MiddleRow()
           ],
         ),
       ),
