@@ -1,10 +1,10 @@
 // External imports
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+// Internal imports.
 import 'package:tesla_app/widgets/battery.dart';
 import 'package:tesla_app/widgets/lastseen.dart';
 import 'package:tesla_app/widgets/middlerow.dart';
@@ -55,9 +55,8 @@ class LandingPage extends StatelessWidget {
           children: [
             BatteryRow(),
             LastSeenLine(),
-            Container(
-              width: double.infinity,
-              height: 230,
+            Expanded(
+              child: Image.asset("assets/tesla.png"),
             ),
             MiddleRow(),
             SizedBox(
