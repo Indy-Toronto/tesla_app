@@ -51,6 +51,7 @@ class LandingPage extends StatelessWidget {
           left: 15,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             BatteryRow(),
             LastSeenLine(),
@@ -65,10 +66,27 @@ class LandingPage extends StatelessWidget {
             Tile(
               icon: FontAwesomeIcons.car,
               name: "Control",
+              subname: "",
             ),
             Tile(
               icon: FontAwesomeIcons.fan,
               name: "Climate",
+              subname: "Interior 18 C",
+            ),
+            Tile(
+              icon: FontAwesomeIcons.locationPin,
+              name: "Location",
+              subname: "75 Queens Street",
+            ),
+            Tile(
+              icon: FontAwesomeIcons.check,
+              name: "Security",
+              subname: "Iphone Connected",
+            ),
+            Tile(
+              icon: FontAwesomeIcons.bagShopping,
+              name: "Upgrades",
+              subname: "",
             )
           ],
         ),

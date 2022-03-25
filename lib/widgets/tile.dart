@@ -5,9 +5,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Tile extends StatelessWidget {
   final String name;
+  final String subname;
   final IconData icon;
 
-  Tile({required this.name, required this.icon});
+  Tile({
+    required this.name,
+    required this.subname,
+    required this.icon,
+  });
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -22,6 +27,10 @@ class Tile extends StatelessWidget {
           fontSize: 18,
           fontWeight: FontWeight.w600,
         ),
+      ),
+      subtitle: Text(
+        subname,
+        style: TextStyle(color: Colors.grey.shade600),
       ),
       trailing: Icon(
         Icons.arrow_forward_ios,
