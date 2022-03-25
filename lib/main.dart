@@ -5,8 +5,10 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tesla_app/battery.dart';
-import 'package:tesla_app/middlerow.dart';
+import 'package:tesla_app/widgets/battery.dart';
+import 'package:tesla_app/widgets/lastseen.dart';
+import 'package:tesla_app/widgets/middlerow.dart';
+import 'package:tesla_app/widgets/tile.dart';
 
 void main(List<String> args) {
   runApp(TeslaApp());
@@ -51,23 +53,23 @@ class LandingPage extends StatelessWidget {
         child: Column(
           children: [
             BatteryRow(),
-            Container(
-              width: double.infinity,
-              child: Text(
-                "Last Seen 2 days ago",
-                style: TextStyle(
-                  color: Colors.grey.shade500,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 11,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
+            LastSeenLine(),
             Container(
               width: double.infinity,
               height: 230,
             ),
-            MiddleRow()
+            MiddleRow(),
+            SizedBox(
+              height: 22,
+            ),
+            Tile(
+              icon: FontAwesomeIcons.car,
+              name: "Control",
+            ),
+            Tile(
+              icon: FontAwesomeIcons.fan,
+              name: "Climate",
+            )
           ],
         ),
       ),

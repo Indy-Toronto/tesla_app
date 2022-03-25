@@ -11,19 +11,19 @@ class MiddleRow extends StatelessWidget {
       children: [
         Icon(
           FontAwesomeIcons.lock,
-          color: Colors.grey.shade500,
+          color: Colors.grey.shade600,
         ),
         Icon(
           FontAwesomeIcons.fan,
-          color: Colors.grey.shade500,
+          color: Colors.grey.shade600,
         ),
         Icon(
           FontAwesomeIcons.music,
-          color: Colors.grey.shade500,
+          color: Colors.grey.shade600,
         ),
         Icon(
           FontAwesomeIcons.bolt,
-          color: Colors.grey.shade500,
+          color: Colors.grey.shade600,
         )
       ],
     );
