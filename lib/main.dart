@@ -1,5 +1,5 @@
 // External imports
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -30,6 +30,20 @@ class LandingPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(55, 17, 18, 10),
       appBar: AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 15,
+            ),
+            child: Container(
+              height: 50,
+              width: 50,
+              child: ClipRRect(
+                child: Icon(Icons.person),
+              ),
+            ),
+          )
+        ],
         backgroundColor: Color.fromARGB(0, 17, 18, 10),
         elevation: 0,
         centerTitle: false,
